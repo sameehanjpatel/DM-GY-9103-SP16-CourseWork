@@ -52,6 +52,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="fahrenheitFielsEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="B9z-he-ad6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RRs-95-HQk"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-qA-VwH">
