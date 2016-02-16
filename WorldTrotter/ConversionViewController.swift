@@ -12,6 +12,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
+    
     let numberFormatter: NSNumberFormatter = {
         let nf = NSNumberFormatter()
         nf.numberStyle = .DecimalStyle
@@ -19,6 +20,10 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         nf.maximumFractionDigits = 1
         return nf
     }()
+    override func viewDidLoad(){ //Always call the super implementation of viewDidLoad
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.blackColor()
+        print("MapViewController loaded its view")}
     
 
     var fahrenheitValue: Double? {
@@ -72,6 +77,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             {return true}
     }
     
+   
+
     
   
     }
