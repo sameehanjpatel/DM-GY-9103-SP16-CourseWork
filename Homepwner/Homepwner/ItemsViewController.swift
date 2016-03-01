@@ -60,8 +60,8 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[indexPath.row]
                 
                 
-                let title = "Delete \(item.name)?"
-                let message = "Are you sure you want to delete this item?"
+                let title = "Remove \(item.name)?"
+                let message = "Are you sure you want to remove this item?"
                 
                 let ac = UIAlertController(title: title,
                     message: message,
@@ -70,7 +70,7 @@ class ItemsViewController: UITableViewController {
                 let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
                 ac.addAction(cancelAction)
                 
-                let deleteAction = UIAlertAction(title: "Delete", style: .Destructive,
+                let deleteAction = UIAlertAction(title: "Remove", style: .Destructive,
                     handler: { (action) -> Void in
                         // Remove the item from the store
                         self.itemStore.removeItem(item)
