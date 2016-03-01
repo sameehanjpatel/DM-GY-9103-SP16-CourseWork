@@ -14,6 +14,7 @@
 		F7E9DF5D1C838AC1007943E5 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9DF5C1C838AC1007943E5 /* ItemsViewController.swift */; };
 		F7E9DF5F1C838D3F007943E5 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9DF5E1C838D3F007943E5 /* Items.swift */; };
 		F7E9DF611C839557007943E5 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9DF601C839557007943E5 /* ItemStore.swift */; };
+		F7ED7EBD1C8616A100C779D2 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED7EBC1C8616A100C779D2 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F7E9DF5C1C838AC1007943E5 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		F7E9DF5E1C838D3F007943E5 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		F7E9DF601C839557007943E5 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		F7ED7EBC1C8616A100C779D2 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		F7E9DF491C838864007943E5 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				F7E9DF561C838864007943E5 /* Info.plist */,
 				F7E9DF4A1C838864007943E5 /* AppDelegate.swift */,
 				F7E9DF4E1C838864007943E5 /* Main.storyboard */,
 				F7E9DF511C838864007943E5 /* Assets.xcassets */,
@@ -65,7 +68,7 @@
 				F7E9DF5C1C838AC1007943E5 /* ItemsViewController.swift */,
 				F7E9DF5E1C838D3F007943E5 /* Items.swift */,
 				F7E9DF601C839557007943E5 /* ItemStore.swift */,
-				F7E9DF561C838864007943E5 /* Info.plist */,
+				F7ED7EBC1C8616A100C779D2 /* ItemCell.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				F7E9DF5F1C838D3F007943E5 /* Items.swift in Sources */,
 				F7E9DF611C839557007943E5 /* ItemStore.swift in Sources */,
 				F7E9DF4B1C838864007943E5 /* AppDelegate.swift in Sources */,
+				F7ED7EBD1C8616A100C779D2 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
