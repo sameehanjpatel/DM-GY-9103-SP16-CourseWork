@@ -6,4 +6,22 @@
 //  Copyright © 2016 Big Nerd Ranch. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ViewController: UIViewController{
+@IBOutlet var WebviewL UIWebView
+
+    var URLPath = "https://www.bignerdranch.com"
+
+
+override func viewDidLoad(){
+    super.viewDidLoad()
+    
+    loadAddressURL()
+}
+
+override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+}
+}
+

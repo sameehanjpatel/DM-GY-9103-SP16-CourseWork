@@ -110,11 +110,11 @@
         <!--Map-->
         <scene sceneID="RTz-0J-zYL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kej-Pc-VIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="npH-v7-slw" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="gxy-eP-WdO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kej-Pc-VIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1544" y="274"/>
         </scene>
