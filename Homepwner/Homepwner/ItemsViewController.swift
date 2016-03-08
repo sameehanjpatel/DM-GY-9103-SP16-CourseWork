@@ -12,6 +12,7 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
+    
     @IBAction func addNewItem(sender: AnyObject){
         // Create a new Item and add it to the store
         let newItem = itemStore.createItem()
@@ -19,7 +20,6 @@ class ItemsViewController: UITableViewController {
         // Figure out where that item is in the array
         if let index = itemStore.allItems.indexOf(newItem) {
             let indexPath = NSIndexPath(forRow: index, inSection: 0)
-            
             // Insert this new row into the table.
             tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }}
@@ -44,7 +44,6 @@ class ItemsViewController: UITableViewController {
     }
    
  
-    
     override func tableView(tableView: UITableView,
         moveRowAtIndexPath sourceIndexPath: NSIndexPath,
         toIndexPath destinationIndexPath: NSIndexPath) {
@@ -107,6 +106,7 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            print("cell create")
             // Create an instance of UITableViewCell, with default appearance
             let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
             
@@ -118,6 +118,19 @@ class ItemsViewController: UITableViewController {
             cell.serialNumberLabel.text = item.serialNumber
             cell.valueLabel.text = "$\(item.valueInDollars)"
             
+            if item.valueInDollars  < 50 {
+                cell.backgroundColor = UIColor.greenColor()
+            }
+            else {
+                cell.backgroundColor = UIColor.redColor()
+            }
             return cell
+            
     }
+    
+  
+    
+    
 }
+
+   

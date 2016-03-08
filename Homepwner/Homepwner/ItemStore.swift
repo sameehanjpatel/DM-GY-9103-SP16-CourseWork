@@ -6,12 +6,13 @@
 //  Copyright © 2016 Big Nerd Ranch. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ItemStore {
     
     var allItems: [Item] = []
     
+  
     
     func createItem() -> Item {
         let newItem = Item(random: true)

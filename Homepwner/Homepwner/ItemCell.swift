@@ -23,3 +23,4 @@ class ItemCell: UITableViewCell {
         serialNumberLabel.font = caption1Font}
 
 }
+    

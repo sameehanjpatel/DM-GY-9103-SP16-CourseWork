@@ -6,7 +6,7 @@
 //  Copyright © 2016 Big Nerd Ranch. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Item: NSObject {
     
