@@ -14,7 +14,7 @@ class ItemsViewController: UITableViewController {
     
     
     @IBAction func addNewItem(sender: AnyObject){
-        // Create a new Item and add it to the store
+        
         let newItem = itemStore.createItem()
         
         // Figure out where that item is in the array
