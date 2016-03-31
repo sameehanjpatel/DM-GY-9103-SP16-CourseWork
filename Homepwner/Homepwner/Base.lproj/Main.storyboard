@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Detail View Controller-->
+        <!--Items View Controller-->
         <scene sceneID="TMX-Ej-2GI">
             <objects>
-                <tableViewController id="X5h-CT-VCj" customClass="DetailViewController" sceneMemberID="viewController">
+                <tableViewController id="X5h-CT-VCj" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="LOX-lb-H9j">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
                                     <outlet property="nameLabel" destination="5wK-iV-l8N" id="uuJ-zY-xCx"/>
                                     <outlet property="serialNumberLabel" destination="NmT-KO-fVh" id="OMV-bA-bC6"/>
                                     <outlet property="valueLabel" destination="1If-JK-OJS" id="kal-XV-xdX"/>
-                                    <segue destination="V4I-q1-OC3" kind="show" id="T4c-sP-FkA"/>
+                                    <segue destination="V4I-q1-OC3" kind="show" identifier="ShowItem" id="T4c-sP-FkA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
