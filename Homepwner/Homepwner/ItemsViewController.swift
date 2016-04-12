@@ -143,6 +143,12 @@ class ItemsViewController: UITableViewController {
             return cell
             
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
     
 }
