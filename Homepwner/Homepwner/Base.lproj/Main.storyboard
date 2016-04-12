@@ -130,6 +130,9 @@
                                                 <rect key="frame" x="53" y="0.0" width="321" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="V4I-q1-OC3" id="TCV-gv-gpy"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -146,6 +149,9 @@
                                                 <rect key="frame" x="51" y="0.0" width="323" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="V4I-q1-OC3" id="WZ8-hb-uVq"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -162,6 +168,9 @@
                                                 <rect key="frame" x="50" y="0.0" width="324" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="V4I-q1-OC3" id="Pye-Gp-Vmc"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -179,12 +188,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="t3P-HN-f2o" firstAttribute="top" secondItem="TJI-Uw-YHw" secondAttribute="bottom" constant="8" id="Ksz-KN-XCU"/>
                             <constraint firstItem="6j7-x9-x5t" firstAttribute="top" secondItem="t3P-HN-f2o" secondAttribute="bottom" constant="8" id="MQ5-J0-JxK"/>
                             <constraint firstItem="t3P-HN-f2o" firstAttribute="trailing" secondItem="Xj0-WE-04I" secondAttribute="trailingMargin" id="Nfw-ap-zqG"/>
                             <constraint firstItem="t3P-HN-f2o" firstAttribute="leading" secondItem="Xj0-WE-04I" secondAttribute="leadingMargin" id="Xtp-Tx-2oK"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fil-xQ-7hY" appends="YES" id="OQo-gY-uso"/>
+                        </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -197,6 +210,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5C-E1-QTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fil-xQ-7hY">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="V4I-q1-OC3" id="wHn-OR-JGa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1930" y="337"/>
         </scene>
