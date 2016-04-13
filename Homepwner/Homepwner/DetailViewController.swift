@@ -23,7 +23,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var serialField: UITextField!
     @IBOutlet var dateField: UILabel!
 
-    var item: Item!
+    var item: Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
     
     let numberFormatter: NSNumberFormatter = {
         let formatter = NSNumberFormatter()
