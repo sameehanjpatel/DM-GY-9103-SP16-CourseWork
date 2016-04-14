@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t3P-HN-f2o">
-                                <rect key="frame" x="20" y="52" width="374" height="676"/>
+                                <rect key="frame" x="20" y="52" width="374" height="632"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-7p-2NL">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -152,25 +152,49 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Created " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-35-HqU">
-                                        <rect key="frame" x="0.0" y="114" width="374" height="562"/>
+                                        <rect key="frame" x="0.0" y="114" width="374" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="OLg-Iq-N98">
+                                        <rect key="frame" x="0.0" y="143" width="374" height="490"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aBP-jb-juK" firstAttribute="leading" secondItem="kDe-0e-noz" secondAttribute="leading" id="6Xp-St-OeG"/>
                                     <constraint firstItem="ogl-7p-2NL" firstAttribute="leading" secondItem="aBP-jb-juK" secondAttribute="leading" id="FVA-kD-HSf"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6R-4a-Q4y">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="Anz-pT-SMA"/>
+                                    <constraint firstAttribute="width" constant="600" id="F6g-ro-spL"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="camera" id="HPI-BZ-EkO">
+                                        <connections>
+                                            <action selector="takePicture:" destination="V4I-q1-OC3" id="4Qs-qJ-vPJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="i6R-4a-Q4y" firstAttribute="leading" secondItem="Xj0-WE-04I" secondAttribute="leading" id="7DH-by-ouo"/>
                             <constraint firstItem="t3P-HN-f2o" firstAttribute="top" secondItem="TJI-Uw-YHw" secondAttribute="bottom" constant="8" id="Ksz-KN-XCU"/>
-                            <constraint firstItem="6j7-x9-x5t" firstAttribute="top" secondItem="t3P-HN-f2o" secondAttribute="bottom" constant="8" id="MQ5-J0-JxK"/>
                             <constraint firstItem="t3P-HN-f2o" firstAttribute="trailing" secondItem="Xj0-WE-04I" secondAttribute="trailingMargin" id="Nfw-ap-zqG"/>
+                            <constraint firstItem="i6R-4a-Q4y" firstAttribute="leading" secondItem="Xj0-WE-04I" secondAttribute="leadingMargin" id="SIV-LP-0Jt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i6R-4a-Q4y" secondAttribute="trailing" id="SqZ-22-oxF"/>
+                            <constraint firstItem="6j7-x9-x5t" firstAttribute="top" secondItem="i6R-4a-Q4y" secondAttribute="bottom" id="Xk4-QZ-flo"/>
                             <constraint firstItem="t3P-HN-f2o" firstAttribute="leading" secondItem="Xj0-WE-04I" secondAttribute="leadingMargin" id="Xtp-Tx-2oK"/>
+                            <constraint firstItem="6j7-x9-x5t" firstAttribute="top" secondItem="i6R-4a-Q4y" secondAttribute="bottom" id="hDT-io-dgX"/>
+                            <constraint firstItem="i6R-4a-Q4y" firstAttribute="top" secondItem="t3P-HN-f2o" secondAttribute="bottom" constant="8" id="mia-T1-ITN"/>
+                            <constraint firstItem="i6R-4a-Q4y" firstAttribute="top" secondItem="t3P-HN-f2o" secondAttribute="bottom" constant="417" id="xc6-vC-WB6"/>
+                            <constraint firstAttribute="trailing" secondItem="i6R-4a-Q4y" secondAttribute="trailing" id="yZj-Dj-zGO"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="fil-xQ-7hY" appends="YES" id="OQo-gY-uso"/>
@@ -181,6 +205,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="dateField" destination="Jhw-35-HqU" id="Iuy-vM-IDa"/>
+                        <outlet property="imageView" destination="OLg-Iq-N98" id="TZS-dG-4qy"/>
                         <outlet property="nameField" destination="gj9-XY-ZRU" id="raQ-7r-iLN"/>
                         <outlet property="serialField" destination="awz-c2-G5I" id="L7s-oH-8I7"/>
                         <outlet property="valueField" destination="IOH-sv-zRY" id="wlN-gT-Ols"/>

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate{
+class DetailViewController: UIViewController, UITextFieldDelegate,
+    UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) { view.endEditing(true)
     }
@@ -22,7 +23,40 @@ class DetailViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var valueField: UITextField!
     @IBOutlet var serialField: UITextField!
     @IBOutlet var dateField: UILabel!
+    @IBAction func takePicture(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        
+        // If the device has a camera, take a picture, otherwise,
+        // just pick from photo library
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = .Camera
+        }
+        else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        imagePicker.delegate = self
+        
+        // Place image picker on the screen
+        presentViewController(imagePicker, animated: true, completion: nil)
 
+    }
+    
+    func imagePickerController(picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+    
+    // Get picked image from info dictionary
+    let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    
+    
+    // Put that image onto the screen in our image view
+    imageView.image = image
+    
+    // Take image picker off the screen -
+    // you must call this dismiss method
+    dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBOutlet var imageView: UIImageView!
     var item: Item! {
         didSet {
             navigationItem.title = item.name

@@ -44,9 +44,9 @@ class ViewController: UIViewController {
             
             view.layoutIfNeeded()
             
-            let screenWidth = view.frame.width
-            self.nextQuestionLabelCenterXConstraint.constant = 0
-            self.currentQuestionLabelCenterXConstraint.constant += screenWidth
+            //let screenWidth = view.frame.width
+            //self.nextQuestionLabelCenterXConstraint.constant = 0
+            //self.currentQuestionLabelCenterXConstraint.constant += screenWidth
             
             UIView.animateWithDuration(0.5,
                 delay: 0,
@@ -58,16 +58,16 @@ class ViewController: UIViewController {
                     self.view.layoutIfNeeded()
                 },
                 completion: { _ in
-                    swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
-                    swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
+                    //swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
+                    //swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
                     
                     self.updateOffScreenLabel()
             })
         }
         
         func updateOffScreenLabel() {
-            let screenWidth = view.frame.width
-            nextQuestionLabelCenterXConstraint.constant = -screenWidth
+           // let screenWidth = view.frame.width
+        
         }
         
         @IBAction func showNextQuestion(sender: AnyObject) {
