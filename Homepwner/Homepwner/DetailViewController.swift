@@ -11,6 +11,10 @@ import UIKit
 class DetailViewController: UIViewController, UITextFieldDelegate,
     UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
+    @IBAction func removeImage(sender: UIBarButtonItem) {
+        imageView.image = nil
+    }
+    
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) { view.endEditing(true)
     }
     
@@ -35,6 +39,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate,
             imagePicker.sourceType = .PhotoLibrary
         }
         imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
         
         // Place image picker on the screen
         presentViewController(imagePicker, animated: true, completion: nil)
@@ -50,6 +56,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate,
     
     // Put that image onto the screen in our image view
     imageView.image = image
+        
+    // Store the image in the ImageStore for the item's key
+        imageStore.setImage(image, forKey:item.itemKey)
     
     // Take image picker off the screen -
     // you must call this dismiss method
@@ -62,6 +71,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate,
             navigationItem.title = item.name
         }
     }
+    
+    var imageStore: ImageStore!
     
     let numberFormatter: NSNumberFormatter = {
         let formatter = NSNumberFormatter()
@@ -84,6 +95,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate,
         serialField.text = item.serialNumber
         valueField.text = numberFormatter.stringFromNumber(item.valueInDollars)
         dateField.text = dateFormatter.stringFromDate(item.dateCreated)
+   
+        // Get the item key
+    let key = item.itemKey
+    
+    // If there is an associated image with the item
+    if let imageToDisplay = imageStore.imageForKey(key) {
+        // display it on the image view
+        imageView.image = imageToDisplay
+    }
     }
     
     override func viewDidDisappear(animated: Bool) {
